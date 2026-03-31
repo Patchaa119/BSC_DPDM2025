@@ -1,171 +1,426 @@
-# BSC_DPDM2025
+# Chapter 1: Introduction to Data Mining
 
-Patcharee Deeya 663020583-0
-HW1
+## 🔹 Data Mining คืออะไร?
+กระบวนการค้นหารูปแบบ (patterns), ความสัมพันธ์ (relationships) และความรู้จากข้อมูลจำนวนมาก
 
----
+## 🔹 ขั้นตอนหลัก (KDD Process)
+1. Data Cleaning
+2. Data Integration
+3. Data Selection
+4. Data Transformation
+5. Data Mining
+6. Pattern Evaluation
+7. Knowledge Presentation
 
-# Chapter 1. Introduction
+## 🔹 งานหลักของ Data Mining
+- Classification
+- Regression
+- Clustering
+- Association Rule
+- Anomaly Detection
 
-- ✨ **Why Data Mining?** (ทำไมต้องทำเหมืองข้อมูล?)
-- 🔍 **What Is Data Mining?** (การทำเหมืองข้อมูลคืออะไร?)
-- 🌐 **A Multi-Dimensional View of Data Mining** (มุมมองหลายมิติของการทำเหมืองข้อมูล)
-- 💾 **What Kinds of Data Can Be Mined?** (ข้อมูลประเภทใดนำมาทำเหมืองได้?)
-- 📊 **What Kinds of Patterns Can Be Mined?** (รูปแบบใดสามารถขุดพบได้?)
-- 🛠️ **What Kinds of Technologies Are Used?** (เทคโนโลยีใดที่ใช้ในงานเหมืองข้อมูล?)
-- 🎯 **What Kinds of Applications Are Targeted?** (การประยุกต์ใช้ในด้านต่างๆ)
-- 🛑 **Major Issues in Data Mining** (ปัญหาและความท้าทายในงานเหมืองข้อมูล)
-- 📜 **A Brief History of Data Mining and Society** (ประวัติย่อของ Data Mining)
-- 📝 **Summary** (สรุป)
+## 🔹 Applications
+- Marketing
+- Healthcare
+- Finance
+- Recommendation Systems
+----------------------------------------------------------------------------------------------------
 
----
+# Chapter 2: Getting to Know Your Data
 
-## 1. ✨ Why Data Mining?  
-โลกทุกวันนี้ผลิตข้อมูลแบบ “นาทีต่อนาที” จากธุรกรรมออนไลน์ โซเชียล และอุปกรณ์ดิจิทัลจำนวนมหาศาล  
-ไม่มีมนุษย์คนไหนอ่านหรือวิเคราะห์ทั้งหมดได้ทัน  
+## 🔹 Data Objects & Attributes
+- Data object = entity (row)
+- Attribute = feature (column)
 
-Data Mining จึงจำเป็นเพื่อ:
-- เปลี่ยนข้อมูลดิบให้เป็น insight
-- ค้นหารูปแบบที่ซ่อนอยู่
-- ทำนายเหตุการณ์ในอนาคต
-- ทำให้การตัดสินใจขององค์กรแม่นยำขึ้น
+## 🔹 Types of Attributes
+- Nominal (สี)
+- Binary (0/1)
+- Ordinal (อันดับ)
+- Numeric
+  - Interval
+  - Ratio
 
-เหมือนมี “ผู้ช่วยอัจฉริยะ” ที่คอยค้นหาความลับที่ซ่อนอยู่ในข้อมูล
+## 🔹 Data Types
+- Record data
+- Graph data
+- Time-series
+- Spatial data
 
----
+## 🔹 Basic Statistics
+- Mean
+- Median
+- Mode
+- Variance
+- Standard Deviation
 
-## 2. 🔍 What Is Data Mining?
-Data Mining คือ **กระบวนการค้นหาความรู้จากข้อมูลขนาดใหญ่**  
-โดยใช้เครื่องมือสำคัญ เช่น:
-- Machine Learning  
-- สถิติ  
-- อัลกอริทึมเฉพาะทาง  
+## 🔹 Visualization
+- Histogram
+- Boxplot
+- Scatter plot
 
-เป้าหมายคือสร้างแบบจำลองที่ทำให้ “ข้อมูลเล่าเรื่อง”  
-เช่น ใครจะซื้อสินค้า? ใครเสี่ยงเป็นลูกค้าทิ้ง? ยอดขายจะขึ้นเมื่อไหร่?
+## 🔹 Similarity / Distance
+- Euclidean
+- Manhattan
+- Cosine similarity
 
----
+📌 ใช้สำหรับ preprocessing และเข้าใจข้อมูล :contentReference[oaicite:0]{index=0}
+---------------------------------------------------------------------------------------------------
 
-## 3. 🌐 A Multi-Dimensional View of Data Mining
-Data Mining เป็นงานที่มีหลายมิติ เช่น:
+# Chapter 3: Data Preprocessing
 
-**มุมมองตามงาน:**  
-- classification  
-- clustering  
-- association  
+## 🔹 ทำไมต้อง preprocessing?
+ข้อมูลจริงมี noise, missing, inconsistent
 
-**มุมมองตามข้อมูล:**  
-- ข้อมูลตาราง  
-- ข้อความ  
-- รูปภาพ  
-- วิดีโอ  
-- เว็บ  
+## 🔹 ขั้นตอนหลัก
 
-**มุมมองตามเทคโนโลยี:**  
-- AI  
-- Data warehouse  
-- Visualization  
+### 1. Data Cleaning
+- Missing value
+- Noise
+- Outlier
 
-**มุมมองตามการประยุกต์:**  
-- การตลาด  
-- การเงิน  
-- สุขภาพ  
-- อุตสาหกรรม  
+### 2. Data Integration
+- รวมหลาย dataset
 
----
+### 3. Data Transformation
+- Normalization (Min-Max, Z-score)
+- Aggregation
 
-## 4. 💾 What Kinds of Data Can Be Mined?
-แทบทุกประเภทของข้อมูลสามารถนำมาทำเหมืองได้ เช่น:
+### 4. Data Reduction
+- Feature selection
+- Dimensionality reduction
 
-- **Structured:** ตารางในฐานข้อมูล  
-- **Semi-structured:** XML, JSON  
-- **Unstructured:** ข้อความ, รีวิว, โพสต์  
-- **Multimedia:** ภาพ, เสียง, วิดีโอ  
-- **Time-series / Streaming:** หุ้น, IoT  
-- **Spatial:** ข้อมูลแผนที่  
-- **Web data:** log การใช้งานเว็บ  
+### 5. Discretization
+- Continuous → categorical
 
----
+📌 สำคัญมากก่อนเข้า ML
+----------------------------------------------------------------------------------------------------
 
-## 5. 📊 What Kinds of Patterns Can Be Mined?
-รูปแบบที่สกัดได้ เช่น:
+# Chapter 6: Classification
 
-- **Classification** — ทำนายประเภท  
-- **Clustering** — แบ่งกลุ่มโดยไม่มี label  
-- **Association Rules** — เช่น “ซื้อ A มักซื้อ B”  
-- **Sequential Patterns** — พฤติกรรมตามเวลา  
-- **Outliers** — หาความผิดปกติ  
-- **Prediction** — ทำนายยอดขาย ราคาหุ้น ฯลฯ  
+## 🔹 คืออะไร?
+การทำนาย class label
 
----
+## 🔹 Models สำคัญ
 
-## 6. 🛠️ What Kinds of Technologies Are Used?
-เทคโนโลยีที่รองรับงานเหมืองข้อมูล ได้แก่:
+### 🌳 Decision Tree
+- ใช้ Entropy + Information Gain
+- Top-down, recursive
 
-- Database systems  
-- Data warehouse / OLAP  
-- Machine Learning & AI  
-- Statistical modeling  
-- Hadoop / Spark  
-- Visualization tools  
-- Cloud computing  
+### 📊 Naive Bayes
+- ใช้ Bayes Theorem
+- สมมติ independence
 
----
+### 📏 KNN
+- ดูเพื่อนบ้านใกล้สุด
 
-## 7. 🎯 Applications
-Data Mining ใช้ได้ในหลายอุตสาหกรรม:
-
-- **การตลาด:** personalization, segmentation  
-- **ค้าปลีก:** วิเคราะห์ตะกร้าสินค้า  
-- **การเงิน:** fraud detection, credit scoring  
-- **แพทย์:** ทำนายโรค, วิเคราะห์ผู้ป่วย  
-- **โทรคมนาคม:** คาดการณ์ churn  
-- **อุตสาหกรรม:** predictive maintenance  
-- **ออนไลน์:** ระบบแนะนำแบบ TikTok / Netflix  
+### 🤖 Perceptron
+- Linear classifier
 
 ---
 
-## 8. 🛑 Major Issues in Data Mining
-ประเด็นท้าทายที่ต้องรับมือ:
+## 🔹 Evaluation
 
-- ข้อมูลไม่สะอาด (noise, missing)  
-- ประเด็นความเป็นส่วนตัว  
-- Big data ทำให้ scalability สำคัญ  
-- ความซับซ้อนของข้อมูล  
-- ความยากในการตีความผล  
-- การผสานข้อมูลจากหลายแหล่ง  
+- Confusion Matrix
+- Accuracy
+- Precision
+- Recall
+- F1-score
 
 ---
 
-## 9. 📜 Brief History of Data Mining
-- ยุคแรกเริ่มจากสถิติพื้นฐาน  
-- ฐานข้อมูลเติบโตในปี 1980s  
-- ยุค 1990 เริ่มบูรณาการ ML → Data Mining  
-- ก่อตั้ง SIGKDD  
-- ยุค Big Data ทำให้ Data Mining กลายเป็นเทคโนโลยีหลักขององค์กร  
-- ปัจจุบันเป็นส่วนหนึ่งของยุค AI เต็มรูปแบบ  
+## 🔹 Overfitting
+- แก้ด้วย pruning
+---------------------------------------------------------------------------------------------------
+
+# Chapter 6: Classification
+
+## 🔹 ความหมาย
+Classification คือการสร้างโมเดลเพื่อทำนาย class label (เช่น rain / no_rain)
 
 ---
 
-## 10. 📝 Summary
-Data Mining คือกระบวนการเปลี่ยนข้อมูลจำนวนมากให้เป็นความรู้ที่ใช้จริง  
-โดยมีหลายเทคนิค เช่น classification, clustering, association rules  
-นำไปใช้ได้ทุกอุตสาหกรรม และเป็นรากฐานของเทคโนโลยีสมัยใหม่ในยุค AI
+## 🔹 ขั้นตอนของ Classification
+1. Training: สร้าง model จาก training data  
+2. Testing: ทดสอบกับ test data  
+3. Evaluation: วัดประสิทธิภาพ  
 
 ---
 
-# 📘 ตารางสรุปภาพรวม
+## 🔹 Decision Tree
 
-| หัวข้อ | สรุป |
-|-------|------|
-| Why Data Mining? | โลกมีข้อมูลล้น ต้องดึง insight ออกมาใช้ |
-| What Is Data Mining? | กระบวนการสกัดความรู้ด้วย ML + สถิติ |
-| Multi-Dimensional View | มองงานตามชนิดงาน ข้อมูล เทคโนโลยี |
-| Data Types | ตาราง ข้อความ ภาพ วิดีโอ เว็บ สตรีม |
-| Patterns | classification, clustering, association, outlier |
-| Technologies | AI, DB, Warehouse, Big Data |
-| Applications | การตลาด การเงิน การแพทย์ อุตสาหกรรม |
-| Major Issues | คุณภาพข้อมูล privacy scalability |
-| History | จากสถิติ → ฐานข้อมูล → ML → Big Data |
-| Summary | Data Mining = การสกัดความรู้จากข้อมูลมหาศาล |
+### แนวคิด
+- ใช้การแบ่งข้อมูลเป็นลำดับขั้น
+- เลือก feature ที่ดีที่สุดด้วย Information Gain
 
+### สูตร Entropy
+H(D) = - Σ p_i log2(p_i)
+
+### สูตร Information Gain
+Gain(A) = H(D) - Σ (|D_v| / |D|) H(D_v)
+
+---
+
+### ขั้นตอน
+1. คำนวณ Entropy ของ dataset  
+2. คำนวณ Gain ของทุก feature  
+3. เลือก feature ที่ Gain สูงสุด  
+4. split data  
+5. ทำซ้ำ (recursive)
+
+---
+
+### Stopping Condition
+- Entropy = 0 (pure node)
+- ถึง max_depth
+- จำนวนข้อมูลน้อยเกินไป
+
+---
+
+### ข้อดี
+- เข้าใจง่าย
+- ไม่ต้อง normalize
+
+### ข้อเสีย
+- Overfitting
+- Sensitive ต่อ noise
+
+---
+
+## 🔹 Naive Bayes
+
+### แนวคิด
+ใช้ Bayes theorem โดยสมมติว่า feature เป็นอิสระ
+
+### สูตร
+P(Y|X) ∝ P(Y) Π P(X_i|Y)
+
+---
+
+### ขั้นตอน
+1. คำนวณ Prior  
+2. คำนวณ Likelihood  
+3. ใช้ Laplace Smoothing  
+4. คำนวณ posterior  
+5. เลือก class ที่ probability สูงสุด  
+
+---
+
+### Laplace Smoothing
+P = (count + 1) / (N + k)
+
+---
+
+### ข้อดี
+- เร็ว
+- ใช้กับ categorical ได้ดี
+
+### ข้อเสีย
+- Independence assumption ไม่จริงเสมอ
+
+---
+
+## 🔹 K-Nearest Neighbors (KNN)
+
+### แนวคิด
+- ใช้ “เพื่อนบ้านที่ใกล้ที่สุด”  
+- Majority vote
+
+### Distance
+- Euclidean:
+d = sqrt(Σ (x_i - y_i)^2)
+
+---
+
+### ขั้นตอน
+1. เลือก K  
+2. คำนวณ distance  
+3. เลือก K ตัวที่ใกล้ที่สุด  
+4. vote class  
+
+---
+
+### ข้อดี
+- ง่าย
+- ไม่ต้อง train
+
+### ข้อเสีย
+- ช้า
+- sensitive ต่อ scale
+
+---
+
+## 🔹 Perceptron
+
+### แนวคิด
+- Linear classifier
+- ใช้ weight + bias
+
+### สูตร
+y = sign(w·x + b)
+
+---
+
+### Update Rule
+w = w + η y x
+
+---
+
+## 🔹 Evaluation Metrics
+
+### Confusion Matrix
+
+|        | Pred + | Pred - |
+|--------|--------|--------|
+| Actual + | TP | FN |
+| Actual - | FP | TN |
+
+---
+
+### Accuracy
+Accuracy = (TP + TN) / Total
+
+### Precision
+Precision = TP / (TP + FP)
+
+### Recall
+Recall = TP / (TP + FN)
+
+### F1-score
+F1 = 2PR / (P + R)
+
+---
+
+## 🔹 Overfitting & Underfitting
+
+- Overfitting: model ซับซ้อนเกิน
+- Underfitting: model ง่ายเกิน
+
+---
+
+## 🔹 Model Selection
+- ใช้ validation
+- เปรียบเทียบหลาย model
+---------------------------------------------------------------------------------------------------
+
+# Chapter 8: Clustering
+
+## 🔹 ความหมาย
+Clustering คือการจัดกลุ่มข้อมูลโดยไม่มี label
+
+---
+
+## 🔹 ประเภท
+
+- Partitioning
+- Hierarchical
+- Density-based
+
+---
+
+## 🔹 K-Means
+
+### ขั้นตอน
+1. เลือก K  
+2. สุ่ม centroid  
+3. assign cluster  
+4. update centroid  
+5. ทำซ้ำจน converge  
+
+---
+
+### Objective Function
+Minimize:
+Σ distance(point, centroid)
+
+---
+
+### ข้อดี
+- เร็ว
+- เข้าใจง่าย
+
+### ข้อเสีย
+- ต้องกำหนด K
+- sensitive ต่อ outlier
+
+---
+
+## 🔹 Hierarchical Clustering
+
+### แบบ
+- Agglomerative (bottom-up)
+- Divisive (top-down)
+
+---
+
+### Linkage
+- Single
+- Complete
+- Average
+
+---
+
+## 🔹 DBSCAN
+
+### แนวคิด
+- ใช้ density
+
+### Parameters
+- eps
+- minPts
+
+---
+
+### ข้อดี
+- หา shape แปลก ๆ ได้
+- ไม่ต้องกำหนด K
+
+---
+
+## 🔹 Evaluation
+
+### Silhouette Score
+ใกล้ 1 = ดี
+---------------------------------------------------------------------------------------------------
+
+# Chapter 9: Association Rule Mining
+
+## 🔹 ความหมาย
+ค้นหาความสัมพันธ์ เช่น A → B
+
+---
+
+## 🔹 Metrics
+
+### Support
+Support(A→B) = P(A ∩ B)
+
+---
+
+### Confidence
+Confidence = P(B|A)
+
+---
+
+### Lift
+Lift = Confidence / P(B)
+
+---
+
+## 🔹 Apriori Algorithm
+
+### แนวคิด
+- ถ้า itemset ไม่ frequent → subset ก็ไม่ frequent
+
+---
+
+### ขั้นตอน
+1. หา frequent 1-itemset  
+2. สร้าง candidate  
+3. prune  
+4. ทำซ้ำ  
+
+---
+
+## 🔹 FP-Growth
+- เร็วกว่า Apriori
+- ใช้ FP-tree
